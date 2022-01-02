@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Resource, Api, abort
-from pymongo import MongoClient
+from flask_pymongo import MongoClient
 import os
 from dotenv import load_dotenv
 
@@ -45,4 +45,4 @@ api.add_resource(MoveType, "/<string:character_name>/<string:move_type>")
 api.add_resource(Move, "/<string:character_name>/<string:move_type>/<string:move_name>")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
