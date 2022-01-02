@@ -1,0 +1,282 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "Restful API for Super Smash Bros Melee - frame data for every character. \n Base Url: https://melee-frame-data.herokuapp.com/",
+      "version": "1.0.0",
+      "title": "Melee Frame Data API",
+      "contact": {
+        "email": "apiteam@swagger.io"
+      }
+    },
+    "servers": [
+        {
+            "url": "/"
+        }
+    ],
+    "paths": {
+      "/api/{character}": {
+        "get": {
+          "tags": [
+            "Character"
+          ],
+          "summary": "Get frame data of a character",
+          "description": "Returns all frame data of the requested character",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "character",
+              "in": "path",
+              "description": "The name of the character",
+              "required": true,
+              "type": "string",
+              "items": {
+                "enum": [
+                  "bowser",
+                  "captainfalcon",
+                  "donkeykong",
+                  "drmario",
+                  "falco",
+                  "fox",
+                  "gameandwatch",
+                  "ganondorf",
+                  "iceclimbers",
+                  "jigglypuff",
+                  "kirby",
+                  "link",
+                  "luigi",
+                  "mario",
+                  "marth",
+                  "mewtwo",
+                  "ness",
+                  "peach",
+                  "pichu",
+                  "pikachu",
+                  "roy",
+                  "samus",
+                  "sheik",
+                  "yoshi",
+                  "younglink",
+                  "zelda"
+                ]
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "404": {
+              "description": "Character doesn't exist or misspelled"
+            }
+          }
+        }
+      },
+      "/api/{character}/{move_type}": {
+        "get": {
+          "tags": [
+            "Character"
+          ],
+          "summary": "Get frame data of a certain move type",
+          "description": "Returns frame data of all moves of move type",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "move_type",
+              "in": "path",
+              "description": "The type of move",
+              "required": true,
+              "type": "string",
+              "items": {
+                "enum": [
+                  "groundAttacks",
+                  "aerialAttacks",
+                  "specialAttacks",
+                  "grabs",
+                  "throws",
+                  "dodges",
+                  "misc"
+                ]
+              }
+            },
+            {
+              "name": "character",
+              "in": "path",
+              "description": "The name of the character",
+              "required": true,
+              "type": "string",
+              "items": {
+                "enum": [
+                  "bowser",
+                  "captainfalcon",
+                  "donkeykong",
+                  "drmario",
+                  "falco",
+                  "fox",
+                  "gameandwatch",
+                  "ganondorf",
+                  "iceclimbers",
+                  "jigglypuff",
+                  "kirby",
+                  "link",
+                  "luigi",
+                  "mario",
+                  "marth",
+                  "mewtwo",
+                  "ness",
+                  "peach",
+                  "pichu",
+                  "pikachu",
+                  "roy",
+                  "samus",
+                  "sheik",
+                  "yoshi",
+                  "younglink",
+                  "zelda"
+                ]
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "404": {
+              "description": "Character/move type doesn't exist or misspelled"
+            }
+          }
+        }
+      },
+      "/api/{character}/{move_type}/{move_name}": {
+        "get": {
+          "tags": [
+            "Character"
+          ],
+          "summary": "Get frame data of a certain move type",
+          "description": "Returns frame data of all moves of move type",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "move_name",
+              "in": "path",
+              "description": "The name of move",
+              "required": true,
+              "type": "string",
+              "items": {
+                "enum": [
+                  "jab1",
+                  "jab2",
+                  "jab3",
+                  "rapidJab",
+                  "forwardTilt",
+                  "upTilt",
+                  "downTilt",
+                  "dashAttack",
+                  "forwardSmash",
+                  "upSmash",
+                  "downSmash",
+                  "neutralAir",
+                  "forwardAir",
+                  "backAir",
+                  "upAir",
+                  "downAir",
+                  "neutralB",
+                  "aerialNeutralB",
+                  "sideB",
+                  "aerialSideB",
+                  "upB",
+                  "aerialUpB",
+                  "downB",
+                  "aerialDownB",
+                  "standingGrab",
+                  "dashGrab",
+                  "forwardThrow",
+                  "backThrow",
+                  "downThrow",
+                  "upThrow",
+                  "spotDodge",
+                  "backRoll",
+                  "forwardRoll",
+                  "airDodge",
+                  "weight",
+                  "ffSpeed",
+                  "dashSpeed",
+                  "runSpeed",
+                  "jumpSquat",
+                  "wallJump"
+                ]
+              }
+            },
+            {
+              "name": "move_type",
+              "in": "path",
+              "description": "The type of move",
+              "required": true,
+              "type": "string",
+              "items": {
+                "enum": [
+                  "groundAttacks",
+                  "aerialAttacks",
+                  "specialAttacks",
+                  "grabs",
+                  "throws",
+                  "dodges",
+                  "misc"
+                ]
+              }
+            },
+            {
+              "name": "character",
+              "in": "path",
+              "description": "The name of the character",
+              "required": true,
+              "type": "string",
+              "items": {
+                "enum": [
+                  "bowser",
+                  "captainfalcon",
+                  "donkeykong",
+                  "drmario",
+                  "falco",
+                  "fox",
+                  "gameandwatch",
+                  "ganondorf",
+                  "iceclimbers",
+                  "jigglypuff",
+                  "kirby",
+                  "link",
+                  "luigi",
+                  "mario",
+                  "marth",
+                  "mewtwo",
+                  "ness",
+                  "peach",
+                  "pichu",
+                  "pikachu",
+                  "roy",
+                  "samus",
+                  "sheik",
+                  "yoshi",
+                  "younglink",
+                  "zelda"
+                ]
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "404": {
+              "description": "Character/move_type/move_name doesn't exist or misspelled"
+            }
+          }
+        }
+      }
+    }
+  }
