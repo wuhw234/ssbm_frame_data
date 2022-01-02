@@ -1,18 +1,13 @@
 {
     "swagger": "2.0",
     "info": {
-      "description": "Restful API for Super Smash Bros Melee - frame data for every character. \n Base Url: https://melee-frame-data.herokuapp.com/",
+      "description": "Restful API for Super Smash Bros Melee - frame data for every character. \n Base Url: https://melee-frame-data.herokuapp.com/api/",
       "version": "1.0.0",
       "title": "Melee Frame Data API",
       "contact": {
         "email": "apiteam@swagger.io"
       }
     },
-    "servers": [
-        {
-            "url": "/"
-        }
-    ],
     "paths": {
       "/api/{character}": {
         "get": {
