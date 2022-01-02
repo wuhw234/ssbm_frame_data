@@ -3,6 +3,8 @@ REST API for Super Smash Bros Melee frame data. Most data is taken from the foll
 
 Allows consumers to pull frame data about certain characters, returned in JSON format
 
+[Base URL](https://melee-frame-data.herokuapp.com/api/)
+
 API documentation can be found via [Swagger](https://melee-frame-data.herokuapp.com/swagger/).
 # Features
 See the [Swagger](https://melee-frame-data.herokuapp.com/swagger/) documentation for specifics on using the API
